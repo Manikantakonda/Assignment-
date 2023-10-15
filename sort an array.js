@@ -1,12 +1,10 @@
-//
-// Prompt the user to enter values, separated by commas
-const input = prompt("Enter values separated by commas:");
+const arr1 = [24.6,23.7,18.9,76.5]; 
+const arr2 = [54,23,12,97,100]; 
 
-const values = input.split(",");
+function arrSort(arr) { 
+	arr.sort((a,b)=>b-a); 
+	return arr; 
+} 
 
-const numericValues = values.map(value => parseFloat(value));
-numericValues.sort(function(a, b) {
-  return b - a;
-});
-
-alert("Sorted values in descending order: " + numericValues.join(", "));
+console.log(arrSort(arr1)); 
+console.log(arrSort(arr2));
